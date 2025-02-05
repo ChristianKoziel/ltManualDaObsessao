@@ -7,9 +7,9 @@
     <style>
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #000;
-            color: #fff;
+            font-family: 'Georgia', serif;
+            background-color: #fdf7f7;
+            color: #333;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -24,79 +24,67 @@
             left: 0;
             width: 100%;
             height: 8px;
-            background-color: #555;
+            background-color: #ffe4e1;
         }
 
         .progress-bar {
             height: 100%;
-            width: 60%; /* Atualiza a largura para 60% no terceiro quiz */
-            background-color: red;
-            transition: width 0.3s;
+            width: 60%;
+            background-color: #f78da7;
+            transition: width 0.3s ease;
         }
 
         h1 {
-            font-size: 2rem;
+            font-size: 1.8rem;
             font-weight: bold;
-            color: #fff;
+            color: #d73a4a;
             margin-bottom: 1rem;
-            line-height: 1.2;
-        }
-
-        h1 span {
-            color: red;
-        }
-
-        h2 {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: red;
-            margin-bottom: 1rem;
+            line-height: 1.5;
         }
 
         p {
             font-size: 1rem;
             margin-bottom: 2rem;
+            color: #555;
         }
 
         .cta-button {
-            background-color: red;
-            color: #000;
+            background-color: #f78da7;
+            color: #fff;
             border: none;
             padding: 1rem 2rem;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             font-weight: bold;
-            border-radius: 5px;
+            border-radius: 30px;
             cursor: pointer;
-            transition: background-color 0.3s;
+            transition: background-color 0.3s ease, transform 0.2s ease;
             margin: 0.5rem;
             width: 80%;
             max-width: 400px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
         }
 
         .cta-button:hover {
-            background-color: #00cc00;
+            background-color: #d73a4a;
+            transform: scale(1.05);
         }
 
         img {
-            width: 150px;
+            width: 180px;
             height: auto;
             margin: 1rem;
+            border-radius: 50%;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
         }
 
         /* Responsividade para telas menores */
         @media (max-width: 768px) {
             h1 {
                 font-size: 1.5rem;
-                margin-bottom: 1rem;
-            }
-
-            h2 {
-                font-size: 1.2rem;
-                margin-bottom: 1rem;
             }
 
             p {
-                font-size: 1rem;
+                font-size: 0.9rem;
                 margin-bottom: 1.5rem;
             }
 
@@ -107,33 +95,27 @@
             }
 
             img {
-                width: 120px;
+                width: 140px;
             }
         }
 
-        /* Responsividade para telas muito pequenas, como celulares pequenos */
         @media (max-width: 480px) {
             h1 {
-                font-size: 1.2rem;
-            }
-
-            h2 {
-                font-size: 1rem;
+                font-size: 1.3rem;
             }
 
             p {
-                font-size: 0.9rem;
-                margin-bottom: 1rem;
+                font-size: 0.8rem;
             }
 
             .cta-button {
-                font-size: 1rem;
+                font-size: 0.9rem;
                 padding: 1rem;
                 width: 90%;
             }
 
             img {
-                width: 100px;
+                width: 120px;
             }
         }
     </style>
@@ -151,7 +133,7 @@
     <div class="progress-bar-container">
         <div class="progress-bar" id="progress-bar"></div>
     </div>
-    <img src="src/img/homem e mulher conversando.png" alt="Mulher com Homem">
+    <img src="src/img/homem e mulher conversando.png" alt="Mulher e Homem">
     <h1>Você gostaria de se sentir mais segura e confiante ao interagir com qualquer homem?</h1>
     <p>Selecione sua resposta:</p>
     <button class="cta-button" onclick="nextQuiz()">Sim, definitivamente. Isso me daria uma nova personalidade</button>

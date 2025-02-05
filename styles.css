@@ -8,7 +8,7 @@ body {
 
 /* Header */
 .header {
-  background: linear-gradient(90deg, #FF6B8B, #FF8EA6);
+  /* background: linear-gradient(20deg, #fdf7f7, #FF8EA6); */
   color: white;
   padding: 40px 10%;
   text-align: center;
@@ -49,6 +49,27 @@ body {
   color: #4a4a4a;
 }
 
+/* doutores */
+.section {
+  text-align: center;
+}
+
+.section img {
+  width: 40%; /* Ajusta para um tamanho mais controlado */
+  /* max-width: 200px; Limita o tamanho máximo das imagens */
+  margin: 10px; /* Espaçamento entre as imagens */
+  border-radius: 10px; /* Borda arredondada se desejado */
+}
+
+@media (max-width: 768px) {
+  .section img {
+    width: 70%; /* Imagens ocupam 70% da largura em telas menores */
+    /* max-width: 200px;  */
+    margin: 10px auto; /* Centraliza as imagens */
+  }
+}
+
+/* doutores end */
 .highlight {
   color: #FF6B8B;
   font-weight: bold;
@@ -78,6 +99,11 @@ body {
 p {
   text-align: center;
 }
+.problem-list {
+  list-style-type: none; /* Remove o marcador padrão */
+  padding-left: 0; /* Remove o espaçamento à esquerda */
+}
+
 .problem-list li {
   background-color: #FFF5F7;
   margin: 10px auto;
@@ -285,3 +311,199 @@ footer {
     box-shadow: 0 0 5px rgba(255, 0, 0, 0.3);
   }
 }
+
+/* Estilos Gerais */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #ffffff;
+  color: #333333;
+  font-size: 16px; /* Tamanho base para textos */
+}
+
+/* Header */
+.header {
+  background: linear-gradient(20deg, #fdf7f7, #FF8EA6);
+  color: white;
+  padding: 40px 10%;
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 3em;
+  margin: 0;
+  font-weight: 600;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header p {
+  font-size: 1.2em;
+  margin-top: 10px;
+  font-style: italic;
+  color: #ffffff;
+}
+
+/* Seções */
+.section {
+  padding: 30px 10%;
+  text-align: center;
+  background-color: #FFF5F7;
+}
+
+.section h2 {
+  font-size: 2.5em;
+  color: #FF6B8B;
+  margin-bottom: 20px;
+}
+
+.section p {
+  font-size: 1.2em;
+  line-height: 1.8;
+  margin: 20px 0;
+  color: #4a4a4a;
+}
+
+/* doutores */
+.section {
+  text-align: center;
+}
+
+.section img {
+  width: 40%; /* Ajusta para um tamanho mais controlado */
+  margin: 10px; /* Espaçamento entre as imagens */
+  border-radius: 10px; /* Borda arredondada se desejado */
+}
+
+/* Ajuste de tamanhos responsivos */
+@media (max-width: 768px) {
+  body {
+    font-size: 15px; /* Reduz o tamanho da fonte no celular */
+  }
+  .header h1 {
+    font-size: 2.5em; /* Ajusta o título do header */
+  }
+  .header p {
+    font-size: 1em; /* Ajusta o tamanho do parágrafo no header */
+  }
+  .section h2 {
+    font-size: 2em; /* Ajusta o título da seção */
+  }
+  .section p {
+    font-size: 1em; /* Ajusta o tamanho do texto da seção */
+  }
+  .problem-list li {
+    font-size: 1em; /* Ajusta o texto das listas de problemas */
+  }
+  .check-list li {
+    font-size: 1em; /* Ajusta o tamanho das listas de verificação */
+  }
+  .obsession-title {
+    font-size: 2em; /* Ajusta o título da seção de obsessão */
+  }
+}
+
+/* Doutores end */
+.highlight {
+  color: #FF6B8B;
+  font-weight: bold;
+}
+
+.special {
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.4em;
+  color: #FF6B8B;
+}
+
+.white-text {
+  color: #333333;
+}
+
+.red-text {
+  color: #FF6B8B;
+}
+
+/* Seção de Problemas */
+.problems-section {
+  background-color: #ffffff;
+  padding: 40px 20px;
+  margin: 40px 0;
+  box-shadow: 0 2px 15px rgba(255, 107, 139, 0.1);
+}
+
+.problem-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.problem-list li {
+  background-color: #FFF5F7;
+  margin: 10px auto;
+  padding: 15px 20px;
+  border-radius: 15px;
+  box-shadow: 0 2px 4px rgba(255, 107, 139, 0.1);
+  max-width: 600px;
+  border-left: 5px solid #FF6B8B;
+  transition: transform 0.3s ease;
+}
+
+.problem-list li:hover {
+  transform: translateX(5px);
+}
+
+/* Seção de Obsessão */
+.obsession-section {
+  background-color: #FFF5F7;
+  padding: 60px 20px;
+  text-align: center;
+  color: #333333;
+}
+
+.obsession-title {
+  color: #FF6B8B;
+  font-size: 2.5em;
+}
+
+/* Check list */
+.check-list li {
+  background-color: #ffffff;
+  border: 1px solid #FFD1DC;
+  color: #333333;
+  border-radius: 15px;
+  padding: 10px;
+  margin-bottom: 10px;
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+.check-list li:hover {
+  background-color: #f0f0f0;
+}
+
+/* Footer */
+footer {
+  background-color: #FFF5F7;
+  color: #333333;
+  padding: 20px;
+  text-align: center;
+  border-top: 1px solid #FFD1DC;
+}
+
+/* Botões */
+button {
+  background-color: #FF6B8B;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 15px rgba(255, 107, 139, 0.3);
+}
+
+button:hover {
+  background-color: #FF8EA6;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 20px rgba(255, 107, 139, 0.4);
+}
+

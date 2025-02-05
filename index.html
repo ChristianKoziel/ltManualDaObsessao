@@ -39,7 +39,12 @@
   <section class="section">
     <h2>Por que isso funciona?</h2>
     <p>O <span class="highlight">Manual da Obsessão</span> combina técnicas fundamentadas em pesquisas científicas e nos estudos de especialistas renomados, como o Dr. John Gottman, referência em relacionamentos, e a Dra. Helen Fisher, pesquisadora do amor, para ajudar você a reverter situações desafiadoras, criar laços profundos e despertar emoções tão intensas que <br> <span class="special">ele pode até implorar pela sua atenção!</span></p>
-  </section>
+    <div class="image-container">
+        <img src="src/john-gottman-removebg-preview.png" alt="Dr. John Gottman" style="width: 300px;">
+        <img src="src/images__8_-removebg-preview.png" alt="Dra. Helen Fisher" style="width: 200px;">
+    </div>
+</section>
+
   <section class="section">
     <h2><span class="white-text">VOCÊ JÁ SE PERGUNTOU POR QUE OS HOMENS</span> SÓ PENSAM EM SEXO?</h2>
     <p>O Sexo libera um neurotransmissor no cérebro masculino chamado de <span class="highlight">Dopamina</span>.</p>
@@ -161,8 +166,52 @@
 <section id="bonus" style="text-align: center; padding: 40px 20px; background-color: #FFF5F7; border-radius: 15px; box-shadow: 0px 4px 10px rgba(255, 107, 139, 0.1);">
   <h2 style="color: #FF6B8B; font-size: 2.5em; margin-bottom: 20px;">🚨 ATENÇÃO: OFERTA ESPECIAL POR TEMPO LIMITADO! 🚨</h2>
   <p style="color: #333333; font-size: 1.2em; margin-bottom: 20px;">
-      Se você adquirir o <strong>Manual da Obsessão</strong> hoje, levará <strong>4 bônus exclusivos</strong> que vão potencializar seus resultados! Mas corra, essa oferta é válida somente para o dia de hoje:
+    Se você adquirir o <strong>Manual da Obsessão</strong> hoje, levará <strong>4 bônus exclusivos</strong> que vão potencializar seus resultados! Mas corra, essa oferta é válida somente para o dia de hoje: 
+    <span id="current-date" style="color: #FF6B8B;"></span>
+    <br>
+    <strong>Tempo restante:</strong> <span id="countdown" style="color: #FF6B8B;"></span>
   </p>
+  <script>
+      // Função para formatar a data
+      function formatDate(date) {
+      const day = String(date.getDate()).padStart(2, '0');
+      const month = String(date.getMonth() + 1).padStart(2, '0'); // Mês começa em 0
+      const year = date.getFullYear();
+      return `${day}/${month}/${year}`;
+    }
+
+    // Exibe a data de hoje
+    const today = new Date();
+    document.getElementById("current-date").textContent = formatDate(today);
+
+    // Definindo a data e hora de expiração (por exemplo, 23:59:59 de hoje)
+    const expirationTime = new Date(today);
+    expirationTime.setHours(23, 59, 59, 0);
+
+    // Função para atualizar o contador de tempo restante
+    function updateCountdown() {
+      const now = new Date();
+      const remainingTime = expirationTime - now;
+
+      if (remainingTime <= 0) {
+        document.getElementById("countdown").textContent = "Oferta Expirada!";
+        clearInterval(countdownInterval);
+      } else {
+        const hours = Math.floor(remainingTime / (1000 * 60 * 60));
+        const minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
+        document.getElementById("countdown").textContent = `${hours}h ${minutes}m ${seconds}s`;
+      }
+    }
+
+    // Atualiza a contagem regressiva a cada segundo
+    const countdownInterval = setInterval(updateCountdown, 1000);
+
+    // Atualiza a contagem imediatamente ao carregar a página
+    updateCountdown();
+
+  </script>
+  
 
   <!-- Bônus Cards -->
   <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 20px;">
@@ -245,19 +294,6 @@
   </p>
 </section>
   
-  <script>
-    // Função para formatar a data
-    function formatDate(date) {
-      const day = String(date.getDate()).padStart(2, '0');
-      const month = String(date.getMonth() + 1).padStart(2, '0'); // Mês começa em 0
-      const year = date.getFullYear();
-      return `${day}/${month}/${year}`;
-    }
-  
-    // Exibe a data de hoje
-    const today = new Date();
-    document.getElementById("current-date").textContent = formatDate(today);
-  </script>
 
   <!-- <section id="purchase" style="text-align: center; padding: 40px 20px; background-color: #ffffff; border-radius: 15px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);">
     <h2 style="color: #ff0000; font-size: 2.5em; margin-bottom: 20px;">🚀 GARANTA SEU ACESSO AGORA MESMO! 🚀</h2>
