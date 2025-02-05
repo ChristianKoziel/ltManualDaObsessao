@@ -1,0 +1,287 @@
+/* Estilos Gerais */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #ffffff;
+  color: #333333;
+}
+
+/* Header */
+.header {
+  background: linear-gradient(90deg, #FF6B8B, #FF8EA6);
+  color: white;
+  padding: 40px 10%;
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 3em;
+  margin: 0;
+  font-weight: 600;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header p {
+  font-size: 1.2em;
+  margin-top: 10px;
+  font-style: italic;
+  color: #ffffff;
+}
+
+/* Seções */
+.section {
+  padding: 30px 10%;
+  text-align: center;
+  background-color: #FFF5F7;
+}
+
+.section h2 {
+  font-size: 2.5em;
+  color: #FF6B8B;
+  margin-bottom: 20px;
+}
+
+.section p {
+  font-size: 1.2em;
+  line-height: 1.8;
+  margin: 20px 0;
+  color: #4a4a4a;
+}
+
+.highlight {
+  color: #FF6B8B;
+  font-weight: bold;
+}
+
+.special {
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.4em;
+  color: #FF6B8B;
+}
+
+.white-text {
+  color: #333333;
+}
+
+.red-text {
+  color: #FF6B8B;
+}
+
+/* Seção de Problemas */
+.problems-section {
+  background-color: #ffffff;
+  padding: 40px 20px;
+  margin: 40px 0;
+  box-shadow: 0 2px 15px rgba(255, 107, 139, 0.1);
+}
+p {
+  text-align: center;
+}
+.problem-list li {
+  background-color: #FFF5F7;
+  margin: 10px auto;
+  padding: 15px 20px;
+  border-radius: 15px;
+  box-shadow: 0 2px 4px rgba(255, 107, 139, 0.1);
+  max-width: 600px;
+  border-left: 5px solid #FF6B8B;
+  transition: transform 0.3s ease;
+}
+
+.problem-list li:hover {
+  transform: translateX(5px);
+}
+
+.problem-list .icon {
+  color: #FF6B8B;
+}
+
+/* Seção de Obsessão */
+.obsession-section {
+  background-color: #FFF5F7;
+  padding: 60px 20px;
+  text-align: center;
+  color: #333333;
+}
+
+.obsession-title {
+  color: #FF6B8B;
+}
+
+.red-box {
+  background-color: #FF6B8B;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 20px;
+  max-width: 80%;
+  box-shadow: 0 2px 15px rgba(255, 107, 139, 0.2);
+}
+
+/* Check list */
+.check-list {
+  list-style-type: none; /* Remove os pontos da lista */
+  padding: 0; /* Remove o espaço interno da lista */
+  margin: 0; /* Remove a margem padrão */
+}
+
+.check-list li {
+  background-color: #ffffff;
+  border: 1px solid #FFD1DC;
+  color: #333333;
+  border-radius: 15px;
+  padding: 10px;
+  margin-bottom: 10px;
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+.check-list li:hover {
+  background-color: #f0f0f0;
+}
+
+.check-list input[type="checkbox"]:checked + label {
+  background-color: #FFD1DC;
+  color: #FF69B4;
+}
+
+.check-list input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.check-list label {
+  cursor: pointer;
+}
+
+
+
+/* Seção de Bônus */
+#bonus {
+  background-color: #FFF5F7;
+  color: #333333;
+}
+
+#bonus h2 {
+  color: #FF6B8B;
+}
+
+/* Botões */
+button {
+  background-color: #FF6B8B;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 15px rgba(255, 107, 139, 0.3);
+}
+
+button:hover {
+  background-color: #FF8EA6;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 20px rgba(255, 107, 139, 0.4);
+}
+
+/* FAQ */
+.faq-section {
+  background-color: #ffffff;
+  border: none;
+  box-shadow: 0 2px 15px rgba(255, 107, 139, 0.1);
+  border-radius: 20px;
+}
+
+.faq-section button {
+  background-color: #FFF5F7;
+  border: 1px solid #FFD1DC;
+  color: #333333;
+  border-radius: 15px;
+}
+
+.faq-section .answer {
+  background-color: #ffffff;
+  border: 1px solid #FFD1DC;
+  border-radius: 15px;
+}
+
+/* Depoimentos */
+/* Depoimentos */
+.testimonials-section {
+  position: relative; /* Para garantir o posicionamento absoluto dos filhos */
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.testimonials-section h2 {
+  color: #FF6B8B;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #FF6B8B;
+  position: absolute;
+  top: 50%; /* Centraliza verticalmente */
+  transform: translateY(-50%);
+  z-index: 10; /* Garante que fique sobre outros elementos */
+}
+
+.swiper-button-next {
+  right: 10px; /* Ajusta distância do lado direito */
+}
+
+.swiper-button-prev {
+  left: 10px; /* Ajusta distância do lado esquerdo */
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #FF6B8B;
+}
+
+
+/* Preços */
+#purchase {
+  background-color: #ffffff;
+}
+
+#purchase h2 {
+  color: #FF6B8B;
+}
+
+/* Footer */
+footer {
+  background-color: #FFF5F7;
+  color: #333333;
+  padding: 20px;
+  text-align: center;
+  border-top: 1px solid #FFD1DC;
+}
+
+/* Elementos decorativos */
+.section::before {
+  content: '♥';
+  font-size: 2em;
+  color: #FFD1DC;
+  display: block;
+  margin-bottom: 20px;
+}
+
+/* Animações suaves */
+.highlight, .special, button, .problem-list li {
+  transition: all 0.3s ease;
+}
+
+/* botao pulsando */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0.3);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0.3);
+  }
+}
